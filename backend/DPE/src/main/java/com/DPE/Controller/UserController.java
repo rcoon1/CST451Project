@@ -7,6 +7,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import com.DPE.dto.requests.NewUserRequest;
+import com.DPE.service.ProductService;
 import com.DPE.service.UserService;
 
 @RestController
@@ -20,5 +21,11 @@ public class UserController {
     @PostMapping("/signup")
     public ResponseEntity<String> createNewAccount(@RequestBody NewUserRequest newUserRequest){
         return new ResponseEntity<>(userService.createNewAccount(newUserRequest), HttpStatus.CREATED);
+    }
+        @Autowired
+    private ProductService productService;
+    @GetMapping("/products")
+    public ResponseEntity<?> getAllProduct(){
+        return ResponseEntity.ok(productService.getAllProduct());
     }
 }

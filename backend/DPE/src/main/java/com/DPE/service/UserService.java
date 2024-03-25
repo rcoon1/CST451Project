@@ -1,6 +1,5 @@
 package com.DPE.service;
 
-import com.DPE.Model.Address;
 import com.DPE.dto.requests.NewUserRequest;
 
 public interface UserService {

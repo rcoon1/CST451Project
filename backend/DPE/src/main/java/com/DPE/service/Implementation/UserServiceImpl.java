@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.DPE.Dao.AddressRepository;
 import com.DPE.Dao.AuthorityRepository;
-import com.DPE.Dao.CartItemRepository;
 import com.DPE.Dao.UserRepository;
 import com.DPE.Model.*;
 import com.DPE.dto.requests.NewUserRequest;
@@ -20,9 +19,6 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
-
-    @Autowired
-    private CartItemRepository cartRepository;
 
     @Autowired
     private AddressRepository addressRepository;
